@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Figtree';
+    src: local('Figtree-VariableFont_wght'),
+    url(Figtree-VariableFont_wght.ttf),
+    format('ttf');
+}
+@font-face {
+    font-family: 'Figtree-Extrabold';
+    src: local('Figtree-Extrabold'),
+    url(../fonts/static/Figtree-ExtraBold.ttf),
+    format('ttf');
+}
+@font-face {
+    font-family: 'Figtree-Semibold';
+    src: local('Figtree-Semibold'),
+    url(../fonts/static/Figtree-SemiBold.ttf),
+    format('ttf');
+}
+:root {
+    --amarillo : hsl(47, 88%, 63%);
+    --blanco : hsl(0, 0%, 100%);
+    --gris : hsl(0, 0%, 50%);
+    --negro : hsl(0, 0%, 7%);
+
+    --fuente : 'Figtree', san-serif;
+    --fuenteBold : 'Figtree-Extrabold', san-serif;
+    --fuenteSemibold : 'Figtree-Semibold', san-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+body {
+    font-family: var(--fuente);
+    background-color: var(--amarillo);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* globales */
+[class$="__contenedor"] {
+    width: 33rem;
+    height: 50rem;
+    background-color: var(--blanco);
+    padding: 2.5rem;
+    border: .1rem solid var(--negro);
+    border-radius: 2rem;
+    box-shadow: 10px 10px;
+}
+@media (min-width: 1440px) {
+    [class$="__contenedor"] {
+        width: 38rem;
+        height: 52rem;
+    }
+}
+.main__imagen {
+    border-radius: 1rem;
+}
+.main__learning {
+    font-size: 1.5rem;
+    display: inline-block;
+    background-color: var(--amarillo);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    margin: 2rem 0 1rem 0;
+}
+.main__publicado {
+    margin: 0;
+    color: var(--negro);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.main__titulo {
+    font-family: var(--fuenteSemibold);
+    letter-spacing: -.1rem;
+}
+.main__titulo:hover {
+    color: var(--amarillo);
+    cursor: pointer;
+}
+.main__texto {
+    color: var(--gris);
+    font-family: var(--fuenteSemibold);
+    line-height: 1.5;
+}
+.main__autor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.autor__imagen {
+    width: 3rem;
+}
+.autor__texto {
+    font-family: var(--fuenteBold);
+}
+
+.attribution { 
+    text-align: center; 
+    margin-top: 4rem;
+    color: var(--negro);
+    font-family: var(--fuenteSemibold);
+}
+.attribution a { 
+    text-decoration: none;
+    font-family: var(--fuenteBold);
+    color: var(--gris); 
+}
